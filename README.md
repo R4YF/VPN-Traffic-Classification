@@ -37,4 +37,4 @@ main_directory/
 ......1.jpg
 ```
 
-
+The model achieved an accuracy of 89% after being trained for 10 epochs.
