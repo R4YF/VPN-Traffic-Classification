@@ -30,11 +30,11 @@ The training data should be placed under the same directory and follow the struc
 ```
 VPN_Traffic/
 ...class_a/
-......0.jpg
-......1.jpg
+......0.png
+......1.png
 ...class_b/
-......0.jpg
-......1.jpg
+......0.png
+......1.png
 ```
 
 [Preprocessed dataset](https://drive.google.com/drive/folders/1uIf0KGBn1aBV3BhQOrMi3DAdQHFzFKzc?usp=sharing) can be directly used for training after being extracted. Alternatively, follow the guide above to generate other datasets for training.
