@@ -15,7 +15,11 @@ To extract the payload data from the packets, [nPrint](https://nprint.github.io/
 >Holland, Jordan and Schmitt, Paul and Feamster, Nick and Mittal, Prateek, "nPrint: A Standard Data Representation for Network Traffic Analysis", arXiv:2008.02695
 
 * Output packet payload bits from the Pcap file into a CSV file.
-
 ```
 $ nprint -P filename.pcap -p 1024 -W filename.csv
+```
+
+* Generate images from CSV files for training, use `--i` to specify the starting index of images.
+```
+$ python csv2img.py --r filename.csv --w ./image_path/ --i 0
 ```
