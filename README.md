@@ -9,3 +9,7 @@ The VPN portion of data from [VPN-nonVPN dataset (ISCXVPN2016)](https://www.unb.
 To extract the payload data from the packets, [nPrint](https://nprint.github.io/nprint/) is required to be installed either on Debian or MacOS.
 >Holland, Jordan and Schmitt, Paul and Feamster, Nick and Mittal, Prateek, "nPrint: A Standard Data Representation for Network Traffic Analysis", arXiv:2008.02695
 
+..* Output packet payload bits from the Pcap file into a CSV file.
+```
+$ nprint -P filename.pcap -p 1024 -W filename.csv
+```
