@@ -14,7 +14,7 @@ To extract the payload data from the packets, [nPrint](https://nprint.github.io/
 
 >Holland, Jordan and Schmitt, Paul and Feamster, Nick and Mittal, Prateek, "nPrint: A Standard Data Representation for Network Traffic Analysis", arXiv:2008.02695
 
-* Output packet payload bits from the Pcap file into a CSV file.
+* Output the first 1024 bytes of packet payload as bits from the Pcap file into a CSV file.
 ```
 $ nprint -P filename.pcap -p 1024 -W filename.csv
 ```
@@ -36,5 +36,7 @@ VPN_Traffic/
 ......0.jpg
 ......1.jpg
 ```
+
+[Preprocessed dataset](https://drive.google.com/drive/folders/1uIf0KGBn1aBV3BhQOrMi3DAdQHFzFKzc?usp=sharing) can be directly used for training after being extracted. Alternatively, follow the guide above to generate other datasets for training.
 
 The model achieved an accuracy of 89% after being trained for 10 epochs.
