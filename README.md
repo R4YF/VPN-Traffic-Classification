@@ -6,4 +6,6 @@ The VPN portion of data from [VPN-nonVPN dataset (ISCXVPN2016)](https://www.unb.
 >Gerard Drapper Gil, Arash Habibi Lashkari, Mohammad Mamun, Ali A. Ghorbani, "Characterization of Encrypted and VPN Traffic Using Time-Related Features", In Proceedings of the 2nd International Conference on Information Systems Security and Privacy(ICISSP 2016) , pages 407-414, Rome, Italy.
 
 ### Data Extraction
-To extract the payload data from the packets, [nPrint](https://github.com/nprint/nprint) is required to be installed.
+To extract the payload data from the packets, [nPrint](https://nprint.github.io/nprint/) is required to be installed either on Debian or MacOS.
+>Holland, Jordan and Schmitt, Paul and Feamster, Nick and Mittal, Prateek, "nPrint: A Standard Data Representation for Network Traffic Analysis", arXiv:2008.02695
+
