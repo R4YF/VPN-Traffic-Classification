@@ -23,3 +23,6 @@ $ nprint -P filename.pcap -p 1024 -W filename.csv
 ```
 $ python csv2img.py --r filename.csv --w ./image_path/ --i 0
 ```
+
+### Training
+
