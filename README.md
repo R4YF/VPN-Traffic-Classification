@@ -27,8 +27,14 @@ $ python csv2img.py --r filename.csv --w ./image_path/ --i 0
 ### Training
 
 The training data should be placed under the same directory and follow the structure
-* Dataset
-  * lable_1
-    * 0.png
-    * 1.png
-  * lable_2
+```
+main_directory/
+...class_a/
+......0.jpg
+......1.jpg
+...class_b/
+......0.jpg
+......1.jpg
+```
+
+
