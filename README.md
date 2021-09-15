@@ -39,4 +39,13 @@ VPN_Traffic/
 
 [Preprocessed dataset](https://drive.google.com/drive/folders/1uIf0KGBn1aBV3BhQOrMi3DAdQHFzFKzc?usp=sharing) can be directly used for training after being extracted. Alternatively, follow the guide above to generate other datasets for training.
 
-The model achieved an accuracy of 89% after being trained for 15 epochs.
+The model achieved an accuracy of 89% after 15 epochs.
+
+### Inference
+
+Try the model on an image generated from a packet.
+```
+$ python inference.py --m ./callbacks_cnn/model.h5 --r filename.png
+```
+
+Use `--m` to input the saved model checkpoint directory, which is `./callbacks_cnn/model.h5` by default.
