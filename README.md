@@ -4,7 +4,7 @@ This project utilizes a convolutional neural network (CNN) to differentiate diff
 
 ### Dataset
 
-The VPN portion of data from [VPN-nonVPN dataset (ISCXVPN2016)](https://www.unb.ca/cic/datasets/vpn.html) was used for training the model, specifically `vpn_email2a.pcap`, `vpn_email2b.pcap`, `vpn_facebook_audio2.pcap`, `vpn_facebook_chat1a.pcap`, `vpn_facebook_chat1b.pcap`, `vpn_sftp_B.pcap`, `vpn_skype_files1a.pcap` and `vpn_youtube_A.pcap` for data across 6 categories of activities.
+The VPN portion of data from [VPN-nonVPN dataset (ISCXVPN2016)](https://www.unb.ca/cic/datasets/vpn.html) was used for training the model, specifically `vpn_email2a.pcap`, `vpn_email2b.pcap`, `vpn_facebook_audio2.pcap`, `vpn_facebook_chat1a.pcap`, `vpn_facebook_chat1b.pcap`, `vpn_skype_files1a.pcap` and `vpn_youtube_A.pcap` for data across 5 categories of activities.
 
 >Gerard Drapper Gil, Arash Habibi Lashkari, Mohammad Mamun, Ali A. Ghorbani, "Characterization of Encrypted and VPN Traffic Using Time-Related Features", In Proceedings of the 2nd International Conference on Information Systems Security and Privacy(ICISSP 2016) , pages 407-414, Rome, Italy.
 
@@ -43,9 +43,12 @@ The model achieved an accuracy of 89% after 15 epochs.
 
 ### Inference
 
-Try the model on an image generated from a packet.
+* Try the model on an image generated from a packet. Use `--m` to input the saved model checkpoint directory, which is `./callbacks_cnn/model.h5` by default.
 ```
 $ python inference.py --m ./callbacks_cnn/model.h5 --r filename.png
 ```
 
-Use `--m` to input the saved model checkpoint directory, which is `./callbacks_cnn/model.h5` by default.
+* Or, use the following command to run inference on all data from one category.
+```
+$ python inference_all.py --m ./callbacks_cnn/model.h5 --r ./VPN_Traffic/classname/ --n number_of_files --l classname
+```

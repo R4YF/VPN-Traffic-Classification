@@ -47,25 +47,45 @@ def inference(img_path, model):
     predictions = model.predict(img_array)
     score = tf.nn.softmax(predictions[0])
 
-    print(
-        "This packet most likely belongs to {} with a {:.2f} percent confidence."
-        .format(class_names[np.argmax(score)], 100 * np.max(score))
-    )
+    #print(
+    #    "This packet most likely belongs to {} with a {:.2f} percent confidence."
+    #    .format(class_names[np.argmax(score)], 100 * np.max(score))
+    #)
 
     iden = class_names[np.argmax(score)]
+    return iden
+
+def inf_all(folder_path, img_num, model, img_label):
+    correct = 0
+
+    for i in range(img_num):
+        img_path = folder_path+str(i)+'.png'
+        
+        iden = inference(img_path, model)
+
+        if iden == img_label:
+            correct = correct+1
+
+    print(
+        "Prediction is " + str((correct/img_num)*100) + " percent accurate."
+        )
 
 def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--m', type=str, required=True)
+    parser.add_argument('--n', type=int, required=True)
     parser.add_argument('--r', type=str, required=True)
+    parser.add_argument('--l', type=str, required=True)
     args = parser.parse_args()
 
     checkpoint_filepath = args.m
-    img_path = args.r
+    folder_path = args.r
+    img_num = args.n
+    img_label = args.l
 
     model = load_model(checkpoint_filepath)
-    inference(img_path, model)
+    inf_all(folder_path, img_num, model, img_label)
 
 if __name__ == '__main__':
     main()
